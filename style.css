@@ -4,7 +4,12 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color :hsl(30, 38%, 92%);    
 }
 
@@ -22,14 +27,14 @@ body{
      
      
 }
- span{
+ section{
      background: #fff; 
      width: 380px;
      height: 468px;
     
 }
 
- span .desktop img{
+ section .desktop img{
     border-radius: 10px 0 0 10px;
     width: 380px;
     height: 468px;
@@ -82,7 +87,6 @@ h2{
 
 .old{
     padding: 15px;
-    text-decoration: line-through;
     color: hsl(228, 12%, 48%);
     opacity: 0.8;
     font-family: Montserrat;
@@ -106,21 +110,25 @@ footer .cart{
 }
 
 @media screen and (max-width: 375px){
-    body{
-        display: flex;
-        flex-flow: column;
-        height: 800px;
-    }
+    
+    body {
+        min-height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+     }
+    
     
     .container{
         flex-flow: column;
-        height: 700px;
+        max-width: fit-content;
         justify-content: center;
         align-items: center;
         
     }
 
-    span{
+    section{
         width: 350px;
         height: 350px;
      }
@@ -131,7 +139,7 @@ footer .cart{
     .mobile{
         display: block
     }
-    span .mobile img{
+    section .mobile img{
         border-radius: 10px 10px 0 0;
         width: 350px;
         height: 350px;
@@ -180,7 +188,6 @@ footer .cart{
     
     .old{
         padding: 10px;
-        text-decoration: line-through;
         color: hsl(228, 12%, 48%);
         font-weight: bolder;
         font-size: .8em;
@@ -198,13 +205,7 @@ footer .cart{
         font-weight: bold;  
     }
     
-       
-     .final{
-        height: 330px;
-    
-     }
-    
      .attribution{
         display: none;
-     }     
+     }      
 }
